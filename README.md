@@ -1,10 +1,10 @@
-# sops-wrapper
+# sops-saas
 
 Integrated library wrapper for [**Mozilla SOPS**](https://github.com/mozilla/sops), ideal for run encryption/decryption on apps and web services, without need to install the official binary.
 ## Usage
 
 ```go
-import "github.com/jfxdev/sops-wrapper"
+import "github.com/jfxdev/sops-saas"
 ```
 
 ```go

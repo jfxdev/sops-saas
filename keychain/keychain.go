@@ -3,10 +3,10 @@ package keychain
 import (
 	"fmt"
 
-	"github.com/jfxdev/sops-wrapper/keychain/aws"
-	"github.com/jfxdev/sops-wrapper/keychain/entities"
-	"github.com/jfxdev/sops-wrapper/keychain/gcp"
-	"github.com/jfxdev/sops-wrapper/keychain/vault"
+	"github.com/jfxdev/sops-saas/keychain/aws"
+	"github.com/jfxdev/sops-saas/keychain/entities"
+	"github.com/jfxdev/sops-saas/keychain/gcp"
+	"github.com/jfxdev/sops-saas/keychain/vault"
 
 	"go.mozilla.org/sops/keys"
 )

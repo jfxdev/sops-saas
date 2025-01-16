@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/jfxdev/sops-wrapper/keychain"
-	"github.com/jfxdev/sops-wrapper/keychain/entities"
+	"github.com/jfxdev/sops-saas/keychain"
+	"github.com/jfxdev/sops-saas/keychain/entities"
 
 	"go.mozilla.org/sops/v3"
 	"go.mozilla.org/sops/v3/aes"
