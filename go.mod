@@ -1,6 +1,7 @@
 module github.com/jfxdev/sops-saas
 
 go 1.19
+toolchain go1.24.1
 
 require (
 	go.mozilla.org/sops v0.0.0-20190912205235-14a22d7a7060
@@ -29,7 +30,7 @@ require (
 	github.com/cenkalti/backoff/v3 v3.2.2 // indirect
 	github.com/dimchansky/utfbom v1.1.1 // indirect
 	github.com/fatih/color v1.16.0 // indirect
-	github.com/golang-jwt/jwt/v4 v4.5.1 // indirect
+	github.com/golang-jwt/jwt/v4 v4.5.2 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
