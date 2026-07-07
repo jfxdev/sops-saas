@@ -10,7 +10,7 @@ import (
 	"github.com/jfxdev/sops-wrapper/keychain/gcp"
 	"github.com/jfxdev/sops-wrapper/keychain/vault"
 
-	"go.mozilla.org/sops/keys"
+	"github.com/getsops/sops/v3/keys"
 )
 
 type KeyGroupFunc func(ctx context.Context, key entities.EncryptionKey) (result keys.MasterKey)

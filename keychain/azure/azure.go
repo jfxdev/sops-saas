@@ -3,9 +3,9 @@ package azure
 import (
 	"context"
 
+	"github.com/getsops/sops/v3/keys"
+	"github.com/getsops/sops/v3/azkv"
 	"github.com/jfxdev/sops-wrapper/keychain/entities"
-	"go.mozilla.org/sops/keys"
-	"go.mozilla.org/sops/v3/azkv"
 )
 
 const Alias = "azure/kv"

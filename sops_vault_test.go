@@ -1,4 +1,4 @@
-package vault
+package sops
 
 import (
 	"context"
@@ -7,28 +7,13 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"os"
+	"reflect"
 	"testing"
 
 	"github.com/jfxdev/sops-wrapper/keychain/entities"
 )
 
-func TestNewKeyGroup(t *testing.T) {
-	ctx := context.Background()
-	key := entities.EncryptionKey{
-		Parameters: map[string]string{
-			"url":         "https://vault.corp.local:8200",
-			"engine_path": "sops",
-			"key_path":    "my-key",
-		},
-	}
-
-	result := NewKeyGroup(ctx, key)
-	if result == nil {
-		t.Fatal("expected non-nil MasterKey")
-	}
-}
-
-func TestVaultMasterKeyEncryptDecrypt(t *testing.T) {
+func TestVaultIntegrationMocked(t *testing.T) {
 	// Start local mock HTTP server simulating Vault Transit Secret Engine
 	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
@@ -92,40 +77,43 @@ func TestVaultMasterKeyEncryptDecrypt(t *testing.T) {
 	os.Setenv("VAULT_TOKEN", "myroot")
 	defer os.Unsetenv("VAULT_TOKEN")
 
+	cipher := NewCipher()
 	ctx := context.Background()
-	key := entities.EncryptionKey{
-		Parameters: map[string]string{
-			"url":         ts.URL,
-			"engine_path": "sops",
-			"key_path":    "my-key",
+
+	config := EncryptionConfig{
+		Format: FormatJSON,
+		Keys: []entities.EncryptionKey{
+			{
+				Platform: "vault/kms",
+				Parameters: map[string]string{
+					"url":         ts.URL,
+					"engine_path": "sops",
+					"key_path":    "my-key",
+				},
+			},
 		},
 	}
 
-	masterKey := NewKeyGroup(ctx, key)
-	if masterKey == nil {
-		t.Fatal("expected non-nil MasterKey")
-	}
-
-	originalDataKey := []byte("some-random-generated-data-key-bytes")
-	
-	// Test Encrypt
-	err := masterKey.Encrypt(originalDataKey)
+	originalData := []byte(`{"secret":"super-confidential","public":"hello"}`)
+	encrypted, err := cipher.Encrypt(ctx, originalData, config)
 	if err != nil {
 		t.Fatalf("failed to encrypt: %v", err)
 	}
 
-	encryptedKeyBytes := masterKey.EncryptedDataKey()
-	if len(encryptedKeyBytes) == 0 {
-		t.Fatal("expected non-empty encrypted data key")
-	}
-
-	// Test Decrypt
-	decryptedDataKey, err := masterKey.Decrypt()
+	decrypted, err := cipher.Decrypt(ctx, encrypted, FormatJSON)
 	if err != nil {
 		t.Fatalf("failed to decrypt: %v", err)
 	}
 
-	if string(decryptedDataKey) != string(originalDataKey) {
-		t.Errorf("decrypted data key does not match original. Expected: %s, got: %s", string(originalDataKey), string(decryptedDataKey))
+	var originalMap, decryptedMap map[string]interface{}
+	if err := json.Unmarshal(originalData, &originalMap); err != nil {
+		t.Fatalf("failed to unmarshal original: %v", err)
+	}
+	if err := json.Unmarshal(decrypted, &decryptedMap); err != nil {
+		t.Fatalf("failed to unmarshal decrypted: %v", err)
+	}
+
+	if !reflect.DeepEqual(originalMap, decryptedMap) {
+		t.Errorf("decrypted data does not match original. Expected: %v, got: %v", originalMap, decryptedMap)
 	}
 }
