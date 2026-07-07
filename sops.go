@@ -8,13 +8,14 @@ import (
 	"github.com/jfxdev/sops-wrapper/keychain"
 	"github.com/jfxdev/sops-wrapper/keychain/entities"
 
-	"go.mozilla.org/sops/v3"
-	"go.mozilla.org/sops/v3/aes"
-	"go.mozilla.org/sops/v3/cmd/sops/common"
-	"go.mozilla.org/sops/v3/cmd/sops/formats"
-	"go.mozilla.org/sops/v3/decrypt"
-	"go.mozilla.org/sops/v3/keyservice"
-	"go.mozilla.org/sops/v3/version"
+	"github.com/getsops/sops/v3"
+	"github.com/getsops/sops/v3/aes"
+	"github.com/getsops/sops/v3/cmd/sops/common"
+	"github.com/getsops/sops/v3/cmd/sops/formats"
+	sopsconfig "github.com/getsops/sops/v3/config"
+	"github.com/getsops/sops/v3/decrypt"
+	"github.com/getsops/sops/v3/keyservice"
+	"github.com/getsops/sops/v3/version"
 )
 
 type DataFormat string
@@ -44,7 +45,7 @@ func (c *cipher) Decrypt(ctx context.Context, content []byte, format DataFormat)
 	if format != FormatYAML && format != FormatJSON {
 		return nil, fmt.Errorf("unsupported format: %s", format)
 	}
-	
+
 	return decrypt.Data(content, string(format))
 }
 
@@ -60,11 +61,12 @@ type EncryptionConfig struct {
 
 func (c *cipher) Encrypt(ctx context.Context, content []byte, config EncryptionConfig) ([]byte, error) {
 	var store common.Store
+	storesConfig := sopsconfig.NewStoresConfig()
 	switch config.Format {
 	case FormatYAML:
-		store = common.StoreForFormat(formats.Yaml)
+		store = common.StoreForFormat(formats.Yaml, storesConfig)
 	case FormatJSON:
-		store = common.StoreForFormat(formats.Json)
+		store = common.StoreForFormat(formats.Json, storesConfig)
 	default:
 		return nil, fmt.Errorf("unsupported format: %s", config.Format)
 	}

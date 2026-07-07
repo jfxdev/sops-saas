@@ -5,8 +5,8 @@ import (
 
 	"github.com/jfxdev/sops-wrapper/keychain/entities"
 
-	"go.mozilla.org/sops/keys"
-	"go.mozilla.org/sops/v3/gcpkms"
+	"github.com/getsops/sops/v3/keys"
+	"github.com/getsops/sops/v3/gcpkms"
 )
 
 const Alias = "gcp/kms"
