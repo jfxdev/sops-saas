@@ -14,7 +14,10 @@ func TestNewKeyGroup(t *testing.T) {
 		Role: "arn:aws:iam::1234567890:role/role",
 	}
 
-	result := NewKeyGroup(ctx, key)
+	result, err := NewKeyGroup(ctx, key)
+	if err != nil {
+		t.Fatalf("unexpected error: %v", err)
+	}
 	if result == nil {
 		t.Fatal("expected non-nil MasterKey")
 	}

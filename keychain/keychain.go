@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/jfxdev/sops-wrapper/keychain/age"
 	"github.com/jfxdev/sops-wrapper/keychain/aws"
 	"github.com/jfxdev/sops-wrapper/keychain/azure"
 	"github.com/jfxdev/sops-wrapper/keychain/entities"
@@ -13,11 +14,12 @@ import (
 	"github.com/getsops/sops/v3/keys"
 )
 
-type KeyGroupFunc func(ctx context.Context, key entities.EncryptionKey) (result keys.MasterKey)
+type KeyGroupFunc func(ctx context.Context, key entities.EncryptionKey) (result keys.MasterKey, err error)
 
 var keyStore = make(map[string]KeyGroupFunc)
 
 func init() {
+	keyStore[age.Alias] = age.NewKeyGroup
 	keyStore[aws.Alias] = aws.NewKeyGroup
 	keyStore[azure.Alias] = azure.NewKeyGroup
 	keyStore[gcp.Alias] = gcp.NewKeyGroup

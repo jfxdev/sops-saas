@@ -11,7 +11,6 @@ import (
 
 const Alias = "gcp/kms"
 
-func NewKeyGroup(ctx context.Context, key entities.EncryptionKey) (result keys.MasterKey) {
-	result = gcpkms.NewMasterKeyFromResourceID(key.ID)
-	return
+func NewKeyGroup(ctx context.Context, key entities.EncryptionKey) (result keys.MasterKey, err error) {
+	return gcpkms.NewMasterKeyFromResourceID(key.ID), nil
 }

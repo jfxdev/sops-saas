@@ -22,7 +22,10 @@ func TestNewKeyGroup(t *testing.T) {
 		},
 	}
 
-	result := NewKeyGroup(ctx, key)
+	result, err := NewKeyGroup(ctx, key)
+	if err != nil {
+		t.Fatalf("unexpected error: %v", err)
+	}
 	if result == nil {
 		t.Fatal("expected non-nil MasterKey")
 	}
@@ -101,7 +104,10 @@ func TestVaultMasterKeyEncryptDecrypt(t *testing.T) {
 		},
 	}
 
-	masterKey := NewKeyGroup(ctx, key)
+	masterKey, err := NewKeyGroup(ctx, key)
+	if err != nil {
+		t.Fatalf("unexpected error: %v", err)
+	}
 	if masterKey == nil {
 		t.Fatal("expected non-nil MasterKey")
 	}
@@ -109,7 +115,7 @@ func TestVaultMasterKeyEncryptDecrypt(t *testing.T) {
 	originalDataKey := []byte("some-random-generated-data-key-bytes")
 	
 	// Test Encrypt
-	err := masterKey.Encrypt(originalDataKey)
+	err = masterKey.Encrypt(originalDataKey)
 	if err != nil {
 		t.Fatalf("failed to encrypt: %v", err)
 	}

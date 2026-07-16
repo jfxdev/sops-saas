@@ -84,7 +84,12 @@ func (c *cipher) Encrypt(ctx context.Context, content []byte, config EncryptionC
 			return nil, fmt.Errorf("failed to get keygroup for platform %s: %w", k.Platform, err)
 		}
 
-		groups = append(groups, sops.KeyGroup{gfunc(ctx, k)})
+		masterKey, err := gfunc(ctx, k)
+		if err != nil {
+			return nil, fmt.Errorf("failed to build master key for platform %s: %w", k.Platform, err)
+		}
+
+		groups = append(groups, sops.KeyGroup{masterKey})
 	}
 
 	tree := sops.Tree{
