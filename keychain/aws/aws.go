@@ -12,7 +12,7 @@ import (
 
 const Alias = "aws/kms"
 
-func NewKeyGroup(ctx context.Context, key entities.EncryptionKey) (result keys.MasterKey) {
+func NewKeyGroup(ctx context.Context, key entities.EncryptionKey) (result keys.MasterKey, err error) {
 	var id string
 	if key.Role == "" {
 		id = key.ID
@@ -25,5 +25,5 @@ func NewKeyGroup(ctx context.Context, key entities.EncryptionKey) (result keys.M
 		kms.ParseKMSContext(key.Context),
 		"",
 	)
-	return
+	return result, nil
 }

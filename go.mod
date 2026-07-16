@@ -13,7 +13,7 @@ require (
 )
 
 require (
-	filippo.io/age v1.3.1 // indirect
+	filippo.io/age v1.3.1
 	github.com/ProtonMail/go-crypto v1.4.1 // indirect
 	github.com/blang/semver v3.5.1+incompatible // indirect
 	github.com/fatih/color v1.19.0 // indirect

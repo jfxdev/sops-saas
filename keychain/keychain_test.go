@@ -3,6 +3,7 @@ package keychain
 import (
 	"testing"
 
+	"github.com/jfxdev/sops-wrapper/keychain/age"
 	"github.com/jfxdev/sops-wrapper/keychain/aws"
 	"github.com/jfxdev/sops-wrapper/keychain/azure"
 	"github.com/jfxdev/sops-wrapper/keychain/gcp"
@@ -11,6 +12,7 @@ import (
 
 func TestKeyGroupSuccess(t *testing.T) {
 	aliases := []string{
+		age.Alias,
 		aws.Alias,
 		azure.Alias,
 		gcp.Alias,

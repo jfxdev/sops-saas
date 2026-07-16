@@ -11,11 +11,10 @@ import (
 
 const Alias = "vault/kms"
 
-func NewKeyGroup(ctx context.Context, key entities.EncryptionKey) (result keys.MasterKey) {
-	result = hcvault.NewMasterKey(
+func NewKeyGroup(ctx context.Context, key entities.EncryptionKey) (result keys.MasterKey, err error) {
+	return hcvault.NewMasterKey(
 		key.Parameters["url"],
 		key.Parameters["engine_path"],
 		key.Parameters["key_path"],
-	)
-	return
+	), nil
 }
