@@ -89,8 +89,8 @@ github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime v1.51.8 h1:xqN00ytUYbty
 github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime v1.51.8/go.mod h1:ud1dBWtckt2MEA4Jqv8wQ0Yy5a9csy8KZt8Hf8t9gY4=
 github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.57.3 h1:owjauLAE3bW8PZDN1xLo9B/JQ0sbUCNFoNhkXCSNri0=
 github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.57.3/go.mod h1:dn4LwmeCdEtY0vnHnFz48VtLf+9GFnnjRvS7su00tt0=
-github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.65.0 h1:3yaFbUbuLfN8n1q01wZtQtHRzUDc/jm0VvniMY0IPE8=
-github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.65.0/go.mod h1:PobeppEnIjw4pcgjFryNDZCTH7AiqZw0yb5r98Gvf9c=
+github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.82.2 h1:g0Hm/up9LDheflUekqCl19nTJatL6MHyvZHJSXOVyBI=
+github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.82.2/go.mod h1:AdyGGib8td8DR+9F5xKLooxlSSoXo4pBVl+FkTpzpNA=
 github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding v1.13.13 h1:mbRIur/BiHK6SKPjoBIXSE/hJ6g6JGRLuxQy1jGjlN4=
 github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding v1.13.13/go.mod h1:ITg9em2KbJx1s0y4aqRX5OYWG6HBZ5TVR//OdpEZ2CQ=
 github.com/aws/aws-sdk-go-v2/service/internal/checksum v1.9.23 h1:9Fjh6fi/U5JEStVZijmaMpUwE/gvBJj7x2B/PjbO9To=
