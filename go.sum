@@ -85,8 +85,8 @@ github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.7.37 h1:zCEORWo0eU0gDjG+Iy
 github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.7.37/go.mod h1:i6c0PEl3TNOWxRbQ++KQcVenPWS/GoQeiklKhNuqzJ8=
 github.com/aws/aws-sdk-go-v2/internal/v4a v1.4.31 h1:3GUprIsfmGcC5SACIyB0e7E0BM1O1b3Erl5CePYIAeQ=
 github.com/aws/aws-sdk-go-v2/internal/v4a v1.4.31/go.mod h1:7PuV1yl5e2xnUbm+RqvVg5i2iBM8EyijZNoI9wsOoOc=
-github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime v1.51.8 h1:xqN00ytUYbtyZybHvWjHpen994RRcWDdTKXzOd3wY2A=
-github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime v1.51.8/go.mod h1:ud1dBWtckt2MEA4Jqv8wQ0Yy5a9csy8KZt8Hf8t9gY4=
+github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime v1.57.0 h1:8V5y7IFaS26IFGWbAb/TipJXBxK/Cf23aDs7oWqeW/I=
+github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime v1.57.0/go.mod h1:tgTZ/fxKi8HS7cQvIkfGLVpEX8Q9vFEPbA+XuMbahok=
 github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.57.3 h1:owjauLAE3bW8PZDN1xLo9B/JQ0sbUCNFoNhkXCSNri0=
 github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.57.3/go.mod h1:dn4LwmeCdEtY0vnHnFz48VtLf+9GFnnjRvS7su00tt0=
 github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.65.0 h1:3yaFbUbuLfN8n1q01wZtQtHRzUDc/jm0VvniMY0IPE8=
