@@ -3,11 +3,11 @@ module github.com/jfxdev/sops-wrapper
 go 1.25.8
 
 require (
-	github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime v1.51.8
+	github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime v1.58.0
 	github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.57.3
-	github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.65.0
-	github.com/aws/aws-sdk-go-v2/service/iotsitewise v1.52.19
-	github.com/aws/aws-sdk-go-v2/service/kinesis v1.43.5
+	github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.82.2
+	github.com/aws/aws-sdk-go-v2/service/iotsitewise v1.56.4
+	github.com/aws/aws-sdk-go-v2/service/kinesis v1.46.6
 	github.com/aws/aws-sdk-go-v2/service/lambda v1.101.4
 	github.com/getsops/sops/v3 v3.13.3
 )
