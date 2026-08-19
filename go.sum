@@ -99,8 +99,8 @@ github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.13.30 h1:/Z5jmNrK
 github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.13.30/go.mod h1:lEzEZnOosE7zi8Z6royW1cFJTD9fpab4Ul1SBrllewk=
 github.com/aws/aws-sdk-go-v2/service/internal/s3shared v1.19.31 h1:uao4A3QZ5UmB326V6KF+qRpv9Tjz7IlnlnTbbANntlU=
 github.com/aws/aws-sdk-go-v2/service/internal/s3shared v1.19.31/go.mod h1:I/1+z0VwL1GhQyLgkoHDlygpUZ+iTAwOQ/NsftiUL2I=
-github.com/aws/aws-sdk-go-v2/service/iotsitewise v1.52.19 h1:e8MFqaQLSvboDwERKnGOgp6B4ewjZ9LRMaejeonOLz0=
-github.com/aws/aws-sdk-go-v2/service/iotsitewise v1.52.19/go.mod h1:v3dRAsz3edtH+TYISUFQgRVkwWib7S8wnsAQK4hMYBc=
+github.com/aws/aws-sdk-go-v2/service/iotsitewise v1.56.4 h1:ruWv0AIkMNs3lFb4ZSv153mmaJBbShwgQUVtdkfth8o=
+github.com/aws/aws-sdk-go-v2/service/iotsitewise v1.56.4/go.mod h1:ZtZdGcqNFS6mCjlxkTe0nvyEkgoyAGTNkOzzhIC5cxc=
 github.com/aws/aws-sdk-go-v2/service/kinesis v1.43.5 h1:LxgRVyuY+5DEPSX7kmin/V7toE8MWZ9U8n2dqRtX+RE=
 github.com/aws/aws-sdk-go-v2/service/kinesis v1.43.5/go.mod h1:eUebEBEqVfOwEyDDDbGauH4PNqDCuepRvTaNbJeWr5w=
 github.com/aws/aws-sdk-go-v2/service/kms v1.54.1 h1:aeJAJyvWS3gQ679pJbz8ZdOh3MViD1zvEdoZMVEawbg=
