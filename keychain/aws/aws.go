@@ -20,9 +20,14 @@ func NewKeyGroup(ctx context.Context, key entities.EncryptionKey) (result keys.M
 		id = fmt.Sprintf("%s+%s", key.ID, key.Role)
 	}
 
+	context := make(map[string]interface{}, len(key.Context))
+	for name, value := range key.Context {
+		context[name] = value
+	}
+
 	result = kms.NewMasterKeyFromArn(
 		id,
-		kms.ParseKMSContext(key.Context),
+		kms.ParseKMSContext(context),
 		"",
 	)
 	return result, nil
