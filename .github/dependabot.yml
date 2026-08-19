@@ -1,0 +1,8 @@
+# Dependabot configuration. This file must live outside .github/workflows so
+# GitHub does not interpret it as an Actions workflow.
+version: 2
+updates:
+  - package-ecosystem: gomod
+    directory: "/"
+    schedule:
+      interval: weekly
