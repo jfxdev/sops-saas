@@ -87,10 +87,14 @@ github.com/aws/aws-sdk-go-v2/internal/v4a v1.4.31 h1:3GUprIsfmGcC5SACIyB0e7E0BM1
 github.com/aws/aws-sdk-go-v2/internal/v4a v1.4.31/go.mod h1:7PuV1yl5e2xnUbm+RqvVg5i2iBM8EyijZNoI9wsOoOc=
 github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime v1.51.8 h1:xqN00ytUYbtyZybHvWjHpen994RRcWDdTKXzOd3wY2A=
 github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime v1.51.8/go.mod h1:ud1dBWtckt2MEA4Jqv8wQ0Yy5a9csy8KZt8Hf8t9gY4=
+github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime v1.58.0 h1:0Uett/m+HPs7G/mNlRjH6dcZkKz8+IaO2G5miISABoU=
+github.com/aws/aws-sdk-go-v2/service/bedrockagentruntime v1.58.0/go.mod h1:tgTZ/fxKi8HS7cQvIkfGLVpEX8Q9vFEPbA+XuMbahok=
 github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.57.3 h1:owjauLAE3bW8PZDN1xLo9B/JQ0sbUCNFoNhkXCSNri0=
 github.com/aws/aws-sdk-go-v2/service/bedrockruntime v1.57.3/go.mod h1:dn4LwmeCdEtY0vnHnFz48VtLf+9GFnnjRvS7su00tt0=
 github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.65.0 h1:3yaFbUbuLfN8n1q01wZtQtHRzUDc/jm0VvniMY0IPE8=
 github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.65.0/go.mod h1:PobeppEnIjw4pcgjFryNDZCTH7AiqZw0yb5r98Gvf9c=
+github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.82.2 h1:g0Hm/up9LDheflUekqCl19nTJatL6MHyvZHJSXOVyBI=
+github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.82.2/go.mod h1:AdyGGib8td8DR+9F5xKLooxlSSoXo4pBVl+FkTpzpNA=
 github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding v1.13.13 h1:mbRIur/BiHK6SKPjoBIXSE/hJ6g6JGRLuxQy1jGjlN4=
 github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding v1.13.13/go.mod h1:ITg9em2KbJx1s0y4aqRX5OYWG6HBZ5TVR//OdpEZ2CQ=
 github.com/aws/aws-sdk-go-v2/service/internal/checksum v1.9.23 h1:9Fjh6fi/U5JEStVZijmaMpUwE/gvBJj7x2B/PjbO9To=
@@ -101,8 +105,12 @@ github.com/aws/aws-sdk-go-v2/service/internal/s3shared v1.19.31 h1:uao4A3QZ5UmB3
 github.com/aws/aws-sdk-go-v2/service/internal/s3shared v1.19.31/go.mod h1:I/1+z0VwL1GhQyLgkoHDlygpUZ+iTAwOQ/NsftiUL2I=
 github.com/aws/aws-sdk-go-v2/service/iotsitewise v1.52.19 h1:e8MFqaQLSvboDwERKnGOgp6B4ewjZ9LRMaejeonOLz0=
 github.com/aws/aws-sdk-go-v2/service/iotsitewise v1.52.19/go.mod h1:v3dRAsz3edtH+TYISUFQgRVkwWib7S8wnsAQK4hMYBc=
+github.com/aws/aws-sdk-go-v2/service/iotsitewise v1.56.4 h1:ruWv0AIkMNs3lFb4ZSv153mmaJBbShwgQUVtdkfth8o=
+github.com/aws/aws-sdk-go-v2/service/iotsitewise v1.56.4/go.mod h1:ZtZdGcqNFS6mCjlxkTe0nvyEkgoyAGTNkOzzhIC5cxc=
 github.com/aws/aws-sdk-go-v2/service/kinesis v1.43.5 h1:LxgRVyuY+5DEPSX7kmin/V7toE8MWZ9U8n2dqRtX+RE=
 github.com/aws/aws-sdk-go-v2/service/kinesis v1.43.5/go.mod h1:eUebEBEqVfOwEyDDDbGauH4PNqDCuepRvTaNbJeWr5w=
+github.com/aws/aws-sdk-go-v2/service/kinesis v1.46.6 h1:vBAmKDz7ChmR2DduER9bFRapw+yME0ck0rgXwwz7AqI=
+github.com/aws/aws-sdk-go-v2/service/kinesis v1.46.6/go.mod h1:IP8pAQrj+qnejKadMOcE3i5leWGHFV4CDapn4jdx6vc=
 github.com/aws/aws-sdk-go-v2/service/kms v1.54.1 h1:aeJAJyvWS3gQ679pJbz8ZdOh3MViD1zvEdoZMVEawbg=
 github.com/aws/aws-sdk-go-v2/service/kms v1.54.1/go.mod h1:0RXNc6Yf3AvSMldGD6Lcch96Ojlw2TtGnHsqfD/L4u8=
 github.com/aws/aws-sdk-go-v2/service/lambda v1.101.4 h1:KUMJh+XB81gVYZqpA3X8Qvtsqdj+fcHXHBzPUUlwzWs=
