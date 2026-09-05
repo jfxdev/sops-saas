@@ -8,7 +8,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/cloudwatchlogs v1.84.1
 	github.com/aws/aws-sdk-go-v2/service/iotsitewise v1.58.1
 	github.com/aws/aws-sdk-go-v2/service/kinesis v1.49.1
-	github.com/aws/aws-sdk-go-v2/service/lambda v1.104.1
+	github.com/aws/aws-sdk-go-v2/service/lambda v1.106.0
 	github.com/getsops/sops/v3 v3.13.3
 )
 
